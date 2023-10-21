@@ -1,0 +1,1 @@
+This is the same general idea as byreference-svelte, made in NextJS with all of the opinions I had gotten from users, as well as what I had noticed myself after using the original for a few years. Tailwind is still used, but with more sophistication. This was made in about two days.

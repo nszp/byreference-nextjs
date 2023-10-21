@@ -1,0 +1,373 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
+
+.card {
+    container-type: inline-size;
+    container-name: card;
+}
+
+.card .card-text {
+    @apply text-3xl;
+}
+
+.card .card-text-sm {
+    @apply text-lg;
+}
+
+@container card (min-width: 50px) {
+    .card .card-text {
+        font-size: clamp(20px, 9cqi, 85px);
+        line-height: 1.2;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card .card-text-sm {
+        /*height: 75%;*/
+        /*column-count: 3;*/
+        /*overflow-wrap: break-word;*/
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: clamp(20px, 4cqi, 100px);
+        line-height: 1.3;
+    }
+}
+
+.card-h {
+    height: clamp(250px, 60vh, 48rem);
+}
+
+.card-w {
+    width: clamp(300px, 60vw, 64rem);
+}
+
+.gradient-background-white {
+    @apply bg-gradient-to-r from-gray-400 via-gray-500 to-gray-300;
+}
+
+.gradient-background-gray {
+    @apply bg-gradient-to-r from-gray-500 via-gray-700 to-gray-600;
+}
+
+.gradient-text {
+    @apply bg-clip-text text-transparent;
+}
+
+
+.gradient-background-sublime {
+    @apply bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500;
+}
+
+.gradient-background-hyper {
+    @apply bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500;
+}
+
+.gradient-background-oceanic {
+    @apply bg-gradient-to-r from-green-300 via-blue-500 to-purple-600;
+}
+
+.gradient-background-cotton-candy {
+    @apply bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400;
+}
+
+.gradient-background-sunset {
+    @apply bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100;
+}
+
+.gradient-background-beachside {
+    @apply bg-gradient-to-r from-yellow-200 via-green-200 to-green-500;
+}
+
+.gradient-background-peachy {
+    @apply bg-gradient-to-r from-red-200 via-red-300 to-yellow-200;
+}
+
+.gradient-background-seafoam {
+    @apply bg-gradient-to-r from-green-200 via-green-300 to-blue-500;
+}
+
+.gradient-background-pandora {
+    @apply bg-gradient-to-r from-green-200 via-green-400 to-purple-700;
+}
+
+.gradient-background-bombpop {
+    @apply bg-gradient-to-r from-red-400 via-gray-300 to-blue-500;
+}
+
+.gradient-background-huckleberry {
+    @apply bg-gradient-to-r from-purple-200 via-purple-400 to-purple-800;
+}
+
+.gradient-background-paradise {
+    @apply bg-gradient-to-r from-blue-300 via-green-200 to-yellow-300;
+}
+
+.gradient-background-sierra-mist {
+    @apply bg-gradient-to-r from-yellow-200 via-green-200 to-green-300;
+}
+
+.gradient-background-strawberry {
+    @apply bg-gradient-to-r from-yellow-200 via-pink-200 to-pink-400;
+}
+
+.gradient-background-big-sur {
+    @apply bg-gradient-to-tr from-violet-500 to-orange-300;
+}
+
+.gradient-background-island-waves {
+    @apply bg-gradient-to-r from-yellow-400 via-gray-50 to-teal-300;
+}
+
+.gradient-background-hunniepop {
+    @apply bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700;
+}
+
+.gradient-background-blue-coral {
+    @apply bg-gradient-to-r from-blue-400 to-emerald-400;
+}
+
+.gradient-background-orange-coral {
+    @apply bg-gradient-to-r from-orange-400 to-rose-400;
+}
+
+.gradient-background-pink-neon {
+    @apply bg-gradient-to-r from-fuchsia-600 to-pink-600;
+}
+
+/*
+
+theme template:
+.theme-THEMENAME {
+    .gradient-background, .gradient-text {
+        @apply
+    }
+
+    .gradient-background-opacity {
+        @apply
+    }
+}
+
+ */
+
+
+.theme-hyper {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500;
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-pink-500/75 via-red-500/75 to-yellow-500/75;
+    }
+}
+
+.theme-sublime {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500;
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-rose-400/75 via-fuchsia-500/75 to-indigo-500/75;
+    }
+}
+
+.theme-oceanic {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-green-300 via-blue-500 to-purple-600
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-green-300/75 via-blue-500/75 to-purple-600/75;
+    }
+}
+
+.theme-cotton-candy {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-pink-300/75 via-purple-300/75 to-indigo-400/75;
+    }
+}
+
+.theme-sunset {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-indigo-200/75 via-red-200/75 to-yellow-100/75;
+    }
+}
+
+.theme-beachside {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-yellow-200 via-green-200 to-green-500
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-yellow-200/75 via-green-200/75 to-green-500/75;
+    }
+}
+
+.theme-peachy {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-red-200 via-red-300 to-yellow-200
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-red-200/75 via-red-300/75 to-yellow-200/75;
+    }
+}
+
+.theme-seafoam {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-green-200 via-green-300 to-blue-500
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-green-200/75 via-green-300/75 to-blue-500/75;
+    }
+}
+
+.theme-pandora {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-green-200 via-green-400 to-purple-700
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-green-200/75 via-green-400/75 to-purple-700/75;
+    }
+}
+
+.theme-bombpop {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-red-400 via-gray-300 to-blue-500
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-red-400/75 via-gray-300/75 to-blue-500/75;
+    }
+}
+
+.theme-huckleberry {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-purple-200 via-purple-400 to-purple-800
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-purple-200/75 via-purple-400/75 to-purple-800/75;
+    }
+}
+
+.theme-paradise {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-blue-300 via-green-200 to-yellow-300
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-blue-300/75 via-green-200/75 to-yellow-300/75;
+    }
+}
+
+.theme-sierra-mist {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-yellow-200 via-green-200 to-green-300
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-yellow-200/75 via-green-200/75 to-green-300/75;
+    }
+}
+
+.theme-strawberry {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-yellow-200 via-pink-200 to-pink-400
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-yellow-200/75 via-pink-200/75 to-pink-400/75;
+    }
+}
+
+.theme-big-sur {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-tr from-violet-500 to-orange-300
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-tr from-violet-500/75 to-orange-300/75;
+    }
+}
+
+.theme-island-waves {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-yellow-400 via-gray-50 to-teal-300
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-yellow-400/75 via-gray-50/75 to-teal-300/75;
+    }
+}
+
+.theme-hunniepop {
+    .gradient-background, .gradient-text {
+        @apply bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700;
+    }
+
+    .gradient-background-opacity {
+        @apply bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300/75 via-green-400/75 to-rose-700/75;
+    }
+}
+
+.theme-blue-coral {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-blue-400 to-emerald-400
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-blue-400/75 to-emerald-400/75;
+    }
+}
+
+.theme-orange-coral {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-orange-400 to-rose-400
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-orange-400/75 to-rose-400/75;
+    }
+}
+
+
+.theme-pink-neon {
+    .gradient-background, .gradient-text {
+        @apply bg-gradient-to-r from-fuchsia-600 to-pink-600
+    }
+
+    .gradient-background-opacity {
+        @apply bg-gradient-to-r from-fuchsia-600/75 to-pink-600/75;
+    }
+}
+
+
+.w-calculated {
+    /* set to width: 100% - 10% */
+    width: calc(100% - 2rem);
+}
